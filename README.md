@@ -1,4 +1,4 @@
-# Data Structure and Algorithms by Kotlin 
-Data Structure by kotlin
+# Data Structures and Algorithms by Kotlin 
+Data Structure in kotlin
 
 * Linked List 
