@@ -1,11 +1,13 @@
 package linkedlist
 
 
-class LinkedList<T> {
+class LinkedList<T> : Iterable<T>, Collection<T> {
     private var head: Node<T>? = null
     private var tail: Node<T>? = null
-    private var size = 0
-    fun isEmpty(): Boolean {
+    override var size = 0
+        private set
+
+    override fun isEmpty(): Boolean {
         return size == 0
     }
 
@@ -18,7 +20,7 @@ class LinkedList<T> {
         return this
     }
 
-    fun append(value: T) {
+    private fun append(value: T) {
         if (isEmpty()) {
             push(value)
             return
@@ -100,5 +102,23 @@ class LinkedList<T> {
         } else {
             head.toString()
         }
+    }
+
+    override fun iterator(): Iterator<T> {
+        return LinkListIterator(this)
+    }
+
+    override fun contains(element: T): Boolean {
+        for (item in this) {
+            if (item == element) return true
+        }
+        return false
+    }
+
+    override fun containsAll(elements: Collection<T>): Boolean {
+        for(searched in elements){
+            if(!contains(searched)) return  false
+        }
+        return  true
     }
 }

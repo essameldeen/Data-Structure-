@@ -53,6 +53,11 @@ fun main(args: Array<String>) {
     print("List after removeAfter:")
     println(list2.toString())
     println("value Removed: $valueRemoved")
+
+
+    for (item in list2) {
+        println(item * 10 )
+    }
 //    val generic = Generic<Int>()
 //    val x: Int = 5
 //    generic.put(x)
