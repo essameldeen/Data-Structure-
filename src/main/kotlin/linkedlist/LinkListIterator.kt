@@ -1,8 +1,9 @@
 package linkedlist
 
-class LinkListIterator<T>(private val list: LinkedList<T>) : Iterator<T> {
+class LinkListIterator<T>(private val list: LinkedList<T>) : Iterator<T>, MutableIterator<T> {
     private var index = 0
     private var lastNode: Node<T>? = null
+
     override fun hasNext(): Boolean {
         return index < list.size
     }
@@ -17,6 +18,18 @@ class LinkListIterator<T>(private val list: LinkedList<T>) : Iterator<T> {
         }
         index++
         return lastNode!!.value
+    }
+
+    override fun remove() {
+        if (index == 1) {
+            list.pop()
+
+        } else {
+            val prevNode = list.nodeAt(index - 2) ?: return
+            list.removeAfter(prevNode)
+            lastNode = prevNode
+        }
+        index--
     }
 
 }

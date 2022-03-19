@@ -1,63 +1,93 @@
 import linkedlist.LinkedList
-import linkedlist.Node
+import linkedlist.printIReverse
 
 fun main(args: Array<String>) {
 
+//
+//    var node1 = Node(1)
+//    var node2 = Node(2)
+//    var node3 = Node(3)
+//    node1.next = node2
+//    node2.next = node3
+//
+//    println(node2.toString())
+//
+//    var list = LinkedList<Int>()
+//    list.push(5).push(4).push(3)
+//    println(list.toString())
+//
+//    val list2 = LinkedList<Int>()
+//    list2.push(1)
+//    list2.push(2)
+//    list2.push(3)
+//    print("List before insert:")
+//    println(list2.toString())
+//    var middleNode = list2.nodeAt(1)!!
+//    for (i in 1..3)
+//        middleNode = list2.insert(i * -1, middleNode)
+//
+//    print("List after insert:")
+//    println(list2.toString())
+//
+//
+//    var valueRemoved = list2.pop()
+//    print("List after pop:")
+//    println(list2.toString())
+//    println("value Removed: $valueRemoved")
+//
+//
+//    print("List before popLast:")
+//    println(list2.toString())
+//    valueRemoved = list2.popLast()
+//    print("List after popLast:")
+//    println(list2.toString())
+//    println("value Removed: $valueRemoved")
+//
+//    print("List before removeAfter:")
+//    println(list2.toString())
+//
+//    var index = list2.nodeAt(1)!!
+//    valueRemoved = list2.removeAfter(index)
+//
+//
+//    print("List after removeAfter:")
+//    println(list2.toString())
+//    println("value Removed: $valueRemoved")
+//
+//
+//    for (item in list2) {
+//        println(item * 10 )
+//    }
 
-    var node1 = Node(1)
-    var node2 = Node(2)
-    var node3 = Node(3)
-    node1.next = node2
-    node2.next = node3
+    // remove item
+    val list: MutableCollection<Int> = LinkedList()
+    list.add(3)
+    list.add(2)
+    list.add(1)
+    println(list)
+    println(list.remove(1))
+    println(list)
 
-    println(node2.toString())
+    // retain listOFItems
+    val list2: MutableCollection<Int> = LinkedList()
+    list2.add(3)
+    list2.add(2)
+    list2.add(1)
+    list2.add(4)
+    list2.add(5)
+    println(list2)
+    println(list2.retainAll(listOf(3, 4, 5)))
+    println(list2)
 
-    var list = LinkedList<Int>()
-    list.push(5).push(4).push(3)
-    println(list.toString())
-
-    val list2 = LinkedList<Int>()
-    list2.push(1)
-    list2.push(2)
-    list2.push(3)
-    print("List before insert:")
-    println(list2.toString())
-    var middleNode = list2.nodeAt(1)!!
-    for (i in 1..3)
-        middleNode = list2.insert(i * -1, middleNode)
-
-    print("List after insert:")
-    println(list2.toString())
-
-
-    var valueRemoved = list2.pop()
-    print("List after pop:")
-    println(list2.toString())
-    println("value Removed: $valueRemoved")
-
-
-    print("List before popLast:")
-    println(list2.toString())
-    valueRemoved = list2.popLast()
-    print("List after popLast:")
-    println(list2.toString())
-    println("value Removed: $valueRemoved")
-
-    print("List before removeAfter:")
-    println(list2.toString())
-
-    var index = list2.nodeAt(1)!!
-    valueRemoved = list2.removeAfter(index)
-
-
-    print("List after removeAfter:")
-    println(list2.toString())
-    println("value Removed: $valueRemoved")
-
-
-    for (item in list2) {
-        println(item * 10 )
-    }
+    val list3 = LinkedList<Int>()
+    list3.add(6)
+    list3.add(5)
+    list3.add(4)
+    list3.add(3)
+    list3.add(2)
+    list3.add(1)
+    println(list3)
+    list3.printIReverse()
 //    val generic = Generic<Int>()
 //    val x: Int = 5
 //    generic.put(x)
