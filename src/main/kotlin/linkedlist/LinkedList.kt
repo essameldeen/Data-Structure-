@@ -172,5 +172,28 @@ class LinkedList<T> : Iterable<T>, Collection<T>, MutableIterable<T>, MutableCol
         return result
     }
 
+    fun getMiddleNode(): T? {
+        if (size == 0) return null
+        val iterator = this.iterator()
+        var iteam = iterator.next()
+        var index = 1
+        if (size % 2 == 0) {
+            var lastIndex = size / 2
+
+            while (index <= lastIndex) {
+                index++
+                iteam = iterator.next()
+            }
+
+        } else {
+            var lastIndex = size / 2
+
+            while (index <= lastIndex) {
+                index++
+                iteam = iterator.next()
+            }
+        }
+        return iteam
+    }
 
 }

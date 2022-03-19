@@ -85,9 +85,25 @@ fun main(args: Array<String>) {
     list3.add(4)
     list3.add(3)
     list3.add(2)
-    list3.add(1)
+
     println(list3)
     list3.printIReverse()
+    println()
+
+    val list4 = LinkedList<Int>()
+    list4.add(1)
+    list4.add(2)
+    list4.add(3)
+    println(list4)
+    println(list4.getMiddleNode())
+
+    val list5 = LinkedList<Int>()
+    list5.add(1)
+    list5.add(2)
+    list5.add(3)
+    list5.add(4)
+    println(list5.toString())
+    println(list5.getMiddleNode())
 //    val generic = Generic<Int>()
 //    val x: Int = 5
 //    generic.put(x)
