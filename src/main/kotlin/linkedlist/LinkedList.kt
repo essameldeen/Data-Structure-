@@ -20,7 +20,7 @@ class LinkedList<T> : Iterable<T>, Collection<T>, MutableIterable<T>, MutableCol
         return this
     }
 
-    private fun append(value: T) {
+    fun append(value: T) {
         if (isEmpty()) {
             push(value)
             return
@@ -195,5 +195,14 @@ class LinkedList<T> : Iterable<T>, Collection<T>, MutableIterable<T>, MutableCol
         }
         return iteam
     }
+
+    fun addInReverse(list: LinkedList<T>, node: Node<T>) {
+        val next = node.next
+        if (next != null) {
+            addInReverse(list, next)
+        }
+        list.append(node.value)
+    }
+
 
 }

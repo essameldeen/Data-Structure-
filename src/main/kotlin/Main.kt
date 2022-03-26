@@ -1,5 +1,7 @@
 import linkedlist.LinkedList
+import linkedlist.mergeSorted
 import linkedlist.printIReverse
+import linkedlist.reversed
 
 fun main(args: Array<String>) {
 
@@ -104,6 +106,29 @@ fun main(args: Array<String>) {
     list5.add(4)
     println(list5.toString())
     println(list5.getMiddleNode())
+
+    val list6 = LinkedList<Int>()
+    list6.add(1)
+    list6.add(2)
+    list6.add(3)
+    list6.add(4)
+    println(list6)
+    println(list6.reversed())
+
+    val left = LinkedList<Int>()
+    left.add(1)
+    left.add(2)
+    left.add(3)
+    left.add(4)
+    println(left)
+    val right = LinkedList<Int>()
+    right.add(-1)
+    right.add(5)
+    right.add(7)
+    right.add(8)
+    println(right)
+    println(left.mergeSorted(right))
+
 //    val generic = Generic<Int>()
 //    val x: Int = 5
 //    generic.put(x)
