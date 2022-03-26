@@ -2,8 +2,23 @@ import linkedlist.LinkedList
 import linkedlist.mergeSorted
 import linkedlist.printIReverse
 import linkedlist.reversed
+import stack.Stack
+import stack.checkParentheses
 
 fun main(args: Array<String>) {
+
+    var stack = Stack<Int>().apply {
+        push(5)
+        push(6)
+        push(7)
+        push(8)
+    }
+
+    println(stack.toString())
+    println(stack.pop())
+
+    var  str :String = "(5esam"
+    println(str.checkParentheses())
 
 //
 //    var node1 = Node(1)
@@ -62,72 +77,72 @@ fun main(args: Array<String>) {
 //    }
 
     // remove item
-    val list: MutableCollection<Int> = LinkedList()
-    list.add(3)
-    list.add(2)
-    list.add(1)
-    println(list)
-    println(list.remove(1))
-    println(list)
-
-    // retain listOFItems
-    val list2: MutableCollection<Int> = LinkedList()
-    list2.add(3)
-    list2.add(2)
-    list2.add(1)
-    list2.add(4)
-    list2.add(5)
-    println(list2)
-    println(list2.retainAll(listOf(3, 4, 5)))
-    println(list2)
-
-    val list3 = LinkedList<Int>()
-    list3.add(6)
-    list3.add(5)
-    list3.add(4)
-    list3.add(3)
-    list3.add(2)
-
-    println(list3)
-    list3.printIReverse()
-    println()
-
-    val list4 = LinkedList<Int>()
-    list4.add(1)
-    list4.add(2)
-    list4.add(3)
-    println(list4)
-    println(list4.getMiddleNode())
-
-    val list5 = LinkedList<Int>()
-    list5.add(1)
-    list5.add(2)
-    list5.add(3)
-    list5.add(4)
-    println(list5.toString())
-    println(list5.getMiddleNode())
-
-    val list6 = LinkedList<Int>()
-    list6.add(1)
-    list6.add(2)
-    list6.add(3)
-    list6.add(4)
-    println(list6)
-    println(list6.reversed())
-
-    val left = LinkedList<Int>()
-    left.add(1)
-    left.add(2)
-    left.add(3)
-    left.add(4)
-    println(left)
-    val right = LinkedList<Int>()
-    right.add(-1)
-    right.add(5)
-    right.add(7)
-    right.add(8)
-    println(right)
-    println(left.mergeSorted(right))
+//    val list: MutableCollection<Int> = LinkedList()
+//    list.add(3)
+//    list.add(2)
+//    list.add(1)
+//    println(list)
+//    println(list.remove(1))
+//    println(list)
+//
+//    // retain listOFItems
+//    val list2: MutableCollection<Int> = LinkedList()
+//    list2.add(3)
+//    list2.add(2)
+//    list2.add(1)
+//    list2.add(4)
+//    list2.add(5)
+//    println(list2)
+//    println(list2.retainAll(listOf(3, 4, 5)))
+//    println(list2)
+//
+//    val list3 = LinkedList<Int>()
+//    list3.add(6)
+//    list3.add(5)
+//    list3.add(4)
+//    list3.add(3)
+//    list3.add(2)
+//
+//    println(list3)
+//    list3.printIReverse()
+//    println()
+//
+//    val list4 = LinkedList<Int>()
+//    list4.add(1)
+//    list4.add(2)
+//    list4.add(3)
+//    println(list4)
+//    println(list4.getMiddleNode())
+//
+//    val list5 = LinkedList<Int>()
+//    list5.add(1)
+//    list5.add(2)
+//    list5.add(3)
+//    list5.add(4)
+//    println(list5.toString())
+//    println(list5.getMiddleNode())
+//
+//    val list6 = LinkedList<Int>()
+//    list6.add(1)
+//    list6.add(2)
+//    list6.add(3)
+//    list6.add(4)
+//    println(list6)
+//    println(list6.reversed())
+//
+//    val left = LinkedList<Int>()
+//    left.add(1)
+//    left.add(2)
+//    left.add(3)
+//    left.add(4)
+//    println(left)
+//    val right = LinkedList<Int>()
+//    right.add(-1)
+//    right.add(5)
+//    right.add(7)
+//    right.add(8)
+//    println(right)
+//    println(left.mergeSorted(right))
 
 //    val generic = Generic<Int>()
 //    val x: Int = 5
