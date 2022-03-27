@@ -2,23 +2,36 @@ import linkedlist.LinkedList
 import linkedlist.mergeSorted
 import linkedlist.printIReverse
 import linkedlist.reversed
+import queue.ArrayListQueue
 import stack.Stack
 import stack.checkParentheses
 
 fun main(args: Array<String>) {
 
-    var stack = Stack<Int>().apply {
-        push(5)
-        push(6)
-        push(7)
-        push(8)
-    }
 
-    println(stack.toString())
-    println(stack.pop())
+    val queue = ArrayListQueue<Int>()
+    queue.enqueue(5)
+    queue.enqueue(4)
+    queue.enqueue(3)
+    queue.enqueue(2)
 
-    var  str :String = "(5esam"
-    println(str.checkParentheses())
+    println(queue.peek())
+    println(queue.dequeue())
+    println(queue.peek())
+
+
+//    var stack = Stack<Int>().apply {
+//        push(5)
+//        push(6)
+//        push(7)
+//        push(8)
+//    }
+//
+//    println(stack.toString())
+//    println(stack.pop())
+//
+//    var  str :String = "(5esam"
+//    println(str.checkParentheses())
 
 //
 //    var node1 = Node(1)
