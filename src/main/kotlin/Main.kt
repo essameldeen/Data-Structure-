@@ -57,6 +57,13 @@ fun main(args: Array<String>) {
     tree.forEachLevelOrder {
         println(it.value)
     }
+    tree.search("Tea")?.let {
+        println("found in Tree ${it.value} ")
+    } ?: println(" not found in Tree")
+
+
+    tree.printEachLevel()
+
 //    val queue = ArrayListQueue<Int>()
 //    queue.enqueue(5)
 //    queue.enqueue(4)
