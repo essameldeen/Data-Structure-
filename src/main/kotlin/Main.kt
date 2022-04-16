@@ -54,7 +54,7 @@ fun main(args: Array<String>) {
 
     val tree = makeBeverageTree()
 
-    tree.forEachDepthFirst {
+    tree.forEachLevelOrder {
         println(it.value)
     }
 //    val queue = ArrayListQueue<Int>()
