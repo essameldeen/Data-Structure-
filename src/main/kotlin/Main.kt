@@ -1,3 +1,4 @@
+import com.sun.source.tree.Tree
 import linkedlist.LinkedList
 import linkedlist.mergeSorted
 import linkedlist.printIReverse
@@ -5,19 +6,66 @@ import linkedlist.reversed
 import queue.ArrayListQueue
 import stack.Stack
 import stack.checkParentheses
+import tree.TreeNode
+
+fun makeBeverageTree(): TreeNode<String> {
+    val tree = TreeNode("Beverage")
+
+    val hot = TreeNode("Hot")
+    val cold = TreeNode("Cold")
+
+    val tea = TreeNode("Tea")
+    val coffee = TreeNode("Coffee")
+    val chocolate = TreeNode("Chocolate")
+
+    val blackTea = TreeNode("Black")
+    val greenTea = TreeNode("green")
+    val chaiTea = TreeNode("Chai")
+
+    val soda = TreeNode("Soda")
+    val milk = TreeNode("Milk")
+
+    val gingerAle = TreeNode("Ginger Ale")
+    val bitterLemon = TreeNode("bitter Lemon")
+
+
+    tree.add(hot)
+    tree.add(cold)
+
+    hot.add(tea)
+    hot.add(coffee)
+    hot.add(chocolate)
+
+    cold.add(soda)
+    cold.add(milk)
+
+    tea.add(blackTea)
+    tea.add(greenTea)
+    tea.add(chaiTea)
+
+    soda.add(gingerAle)
+    soda.add(bitterLemon)
+
+    return tree
+}
 
 fun main(args: Array<String>) {
 
 
-    val queue = ArrayListQueue<Int>()
-    queue.enqueue(5)
-    queue.enqueue(4)
-    queue.enqueue(3)
-    queue.enqueue(2)
+    val tree = makeBeverageTree()
 
-    println(queue.peek())
-    println(queue.dequeue())
-    println(queue.peek())
+    tree.forEachDepthFirst {
+        println(it.value)
+    }
+//    val queue = ArrayListQueue<Int>()
+//    queue.enqueue(5)
+//    queue.enqueue(4)
+//    queue.enqueue(3)
+//    queue.enqueue(2)
+//
+//    println(queue.peek())
+//    println(queue.dequeue())
+//    println(queue.peek())
 
 
 //    var stack = Stack<Int>().apply {
