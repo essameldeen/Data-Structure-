@@ -1,4 +1,5 @@
-import com.sun.source.tree.Tree
+ import bst.BinarySearchTree
+ import com.sun.source.tree.Tree
 import linkedlist.LinkedList
 import linkedlist.mergeSorted
 import linkedlist.printIReverse
@@ -52,18 +53,34 @@ fun makeBeverageTree(): TreeNode<String> {
 fun main(args: Array<String>) {
 
 
-    val tree = makeBeverageTree()
+//    val tree = makeBeverageTree()
+//
+//    tree.forEachLevelOrder {
+//        println(it.value)
+//    }
+//    tree.search("Tea")?.let {
+//        println("found in Tree ${it.value} ")
+//    } ?: println(" not found in Tree")
+//
+//
+//    tree.printEachLevel()
 
-    tree.forEachLevelOrder {
-        println(it.value)
+    val bts = BinarySearchTree<Int>().apply {
+        insert(3)
+        insert(1)
+        insert(4)
+        insert(0)
+        insert(2)
+        insert(5)
     }
-    tree.search("Tea")?.let {
-        println("found in Tree ${it.value} ")
-    } ?: println(" not found in Tree")
 
 
-    tree.printEachLevel()
 
+    println("Before delete" )
+       println(bts.toString())
+    bts.remove(3)
+    println("After   delete" )
+    println(bts.toString())
 //    val queue = ArrayListQueue<Int>()
 //    queue.enqueue(5)
 //    queue.enqueue(4)
